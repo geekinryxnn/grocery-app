@@ -1,0 +1,70 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Apple",
+        "price": 0.99,
+        "category": "Fruits",
+        "inStock": true,
+        "image": "https://static.vecteezy.com/system/resources/thumbnails/016/940/260/small/apple-fruit-isolated-on-white-background-photo.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Milk",
+        "price": 2.49,
+        "category": "Dairy",
+        "inStock": true,
+        "image":"https://media.gettyimages.com/id/1129545686/vector/milk-crown-splash-with-ripples-illustration.jpg?s=612x612&w=0&k=20&c=k-U-GGcLHtrtxq8RKmrHD-wX_3xrF5VGKbJME8Wt9Rs="
+      },
+      {
+        "id": 3,
+        "name": "Oranges",
+        "price": 1.29,
+        "category": "Fruits",
+        "inStock": true,
+        "image": "https://media.gettyimages.com/id/127743622/photo/oranges.jpg?s=612x612&w=0&k=20&c=BCEFIuHA95UOVwxTp79JsLaHUekSDVToF-D-MIoEMmM="
+      },
+      {
+        "id": 4,
+        "name": "Avocados",
+        "price": 1.79,
+        "category": "Vegetables",
+        "inStock": true,
+        "image": "https://media.gettyimages.com/id/961101662/photo/whole-and-sliced-avocado-on-wood.jpg?s=612x612&w=0&k=20&c=6C1CbO-uNhKlPFtOwx4UCYnedpbulSyCWit2zv6FRxM="
+      },
+      {
+        "id": 5,
+        "name": "Tomatoes",
+        "price": 0.89,
+        "category": "Vegetables",
+        "inStock": true,
+        "image": "https://media.gettyimages.com/id/1266238705/photo/various-kinds-of-tomatoes-background.jpg?s=612x612&w=0&k=20&c=gGK32zQwkuR27WedxHxCs30cRtEtSwyp4jIV9btLuwU="
+      },
+      {
+        "id": 6,
+        "name": "Onions",
+        "price": 0.69,
+        "category": "Vegetables",
+        "inStock": true,
+        "image": "https://media.gettyimages.com/id/1452233695/photo/garlic-onion-and-spanish-red-onion-on-a-wooden-plate.jpg?s=612x612&w=0&k=20&c=tWuf53YNm89Z9P65I4FT1zH_ekohde23e3JoFLC6v18="
+      },
+      {
+        "id": 7,
+        "name": "Pepper",
+        "price": 1.19,
+        "category": "Vegetables",
+        "inStock": false,
+        "image": "https://media.gettyimages.com/id/171574668/photo/red-chilli-peppers.jpg?s=612x612&w=0&k=20&c=Y1kZBrrLC3kaAPS_aDfxA4Qq01Yfs4YVgnGyZsYNZ_M="
+      },
+      {
+        "id": 8,
+        "name": "Bananas",
+        "price": 0.59,
+        "category": "Fruits",
+        "inStock": true,
+        "image": "https://media.gettyimages.com/id/171262723/photo/banana.jpg?s=612x612&w=0&k=20&c=MGo7bbVIaWfnEnRkQ89K_XX8xoskxZvljXLhquztwpE="
+  
+      }
+    ],
+    "cart": []
+  }
