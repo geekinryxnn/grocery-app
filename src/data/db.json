@@ -1,70 +1,166 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Apple",
-        "price": 0.99,
-        "category": "Fruits",
-        "inStock": true,
-        "image": "https://static.vecteezy.com/system/resources/thumbnails/016/940/260/small/apple-fruit-isolated-on-white-background-photo.jpg"
-      },
-      {
-        "id": 2,
-        "name": "Milk",
-        "price": 2.49,
-        "category": "Dairy",
-        "inStock": true,
-        "image":"https://media.gettyimages.com/id/1129545686/vector/milk-crown-splash-with-ripples-illustration.jpg?s=612x612&w=0&k=20&c=k-U-GGcLHtrtxq8RKmrHD-wX_3xrF5VGKbJME8Wt9Rs="
-      },
-      {
-        "id": 3,
-        "name": "Oranges",
-        "price": 1.29,
-        "category": "Fruits",
-        "inStock": true,
-        "image": "https://media.gettyimages.com/id/127743622/photo/oranges.jpg?s=612x612&w=0&k=20&c=BCEFIuHA95UOVwxTp79JsLaHUekSDVToF-D-MIoEMmM="
-      },
-      {
-        "id": 4,
-        "name": "Avocados",
-        "price": 1.79,
-        "category": "Vegetables",
-        "inStock": true,
-        "image": "https://media.gettyimages.com/id/961101662/photo/whole-and-sliced-avocado-on-wood.jpg?s=612x612&w=0&k=20&c=6C1CbO-uNhKlPFtOwx4UCYnedpbulSyCWit2zv6FRxM="
-      },
-      {
-        "id": 5,
-        "name": "Tomatoes",
-        "price": 0.89,
-        "category": "Vegetables",
-        "inStock": true,
-        "image": "https://media.gettyimages.com/id/1266238705/photo/various-kinds-of-tomatoes-background.jpg?s=612x612&w=0&k=20&c=gGK32zQwkuR27WedxHxCs30cRtEtSwyp4jIV9btLuwU="
-      },
-      {
-        "id": 6,
-        "name": "Onions",
-        "price": 0.69,
-        "category": "Vegetables",
-        "inStock": true,
-        "image": "https://media.gettyimages.com/id/1452233695/photo/garlic-onion-and-spanish-red-onion-on-a-wooden-plate.jpg?s=612x612&w=0&k=20&c=tWuf53YNm89Z9P65I4FT1zH_ekohde23e3JoFLC6v18="
-      },
-      {
-        "id": 7,
-        "name": "Pepper",
-        "price": 1.19,
-        "category": "Vegetables",
-        "inStock": false,
-        "image": "https://media.gettyimages.com/id/171574668/photo/red-chilli-peppers.jpg?s=612x612&w=0&k=20&c=Y1kZBrrLC3kaAPS_aDfxA4Qq01Yfs4YVgnGyZsYNZ_M="
-      },
-      {
-        "id": 8,
-        "name": "Bananas",
-        "price": 0.59,
-        "category": "Fruits",
-        "inStock": true,
-        "image": "https://media.gettyimages.com/id/171262723/photo/banana.jpg?s=612x612&w=0&k=20&c=MGo7bbVIaWfnEnRkQ89K_XX8xoskxZvljXLhquztwpE="
-  
-      }
-    ],
-    "cart": []
-  }
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "price": 0.99,
+      "category": "Fruits",
+      "inStock": true,
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/016/940/260/small/apple-fruit-isolated-on-white-background-photo.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Milk",
+      "price": 2.49,
+      "category": "Dairy",
+      "inStock": true,
+      "image":"https://media.gettyimages.com/id/1129545686/vector/milk-crown-splash-with-ripples-illustration.jpg?s=612x612&w=0&k=20&c=k-U-GGcLHtrtxq8RKmrHD-wX_3xrF5VGKbJME8Wt9Rs="
+    },
+    {
+      "id": 3,
+      "name": "Oranges",
+      "price": 1.29,
+      "category": "Fruits",
+      "inStock": true,
+      "image": "https://media.gettyimages.com/id/127743622/photo/oranges.jpg?s=612x612&w=0&k=20&c=BCEFIuHA95UOVwxTp79JsLaHUekSDVToF-D-MIoEMmM="
+    },
+    {
+      "id": 4,
+      "name": "Avocados",
+      "price": 1.79,
+      "category": "Vegetables",
+      "inStock": true,
+      "image": "https://media.gettyimages.com/id/961101662/photo/whole-and-sliced-avocado-on-wood.jpg?s=612x612&w=0&k=20&c=6C1CbO-uNhKlPFtOwx4UCYnedpbulSyCWit2zv6FRxM="
+    },
+    {
+      "id": 5,
+      "name": "Tomatoes",
+      "price": 0.89,
+      "category": "Vegetables",
+      "inStock": true,
+      "image": "https://media.gettyimages.com/id/1266238705/photo/various-kinds-of-tomatoes-background.jpg?s=612x612&w=0&k=20&c=gGK32zQwkuR27WedxHxCs30cRtEtSwyp4jIV9btLuwU="
+    },
+    {
+      "id": 6,
+      "name": "Onions",
+      "price": 0.69,
+      "category": "Vegetables",
+      "inStock": true,
+      "image": "https://media.gettyimages.com/id/1452233695/photo/garlic-onion-and-spanish-red-onion-on-a-wooden-plate.jpg?s=612x612&w=0&k=20&c=tWuf53YNm89Z9P65I4FT1zH_ekohde23e3JoFLC6v18="
+    },
+    {
+      "id": 7,
+      "name": "Pepper",
+      "price": 1.19,
+      "category": "Vegetables",
+      "inStock": false,
+      "image": "https://media.gettyimages.com/id/171574668/photo/red-chilli-peppers.jpg?s=612x612&w=0&k=20&c=Y1kZBrrLC3kaAPS_aDfxA4Qq01Yfs4YVgnGyZsYNZ_M="
+    },
+    {
+      "id": 8,
+      "name": "Bananas",
+      "price": 0.59,
+      "category": "Fruits",
+      "inStock": true,
+      "image": "https://media.gettyimages.com/id/171262723/photo/banana.jpg?s=612x612&w=0&k=20&c=MGo7bbVIaWfnEnRkQ89K_XX8xoskxZvljXLhquztwpE="
+
+    },
+    {
+      "id": 9,
+      "name": "Bread",
+      "price": 1.99,
+      "category": "Bakery",
+      "inStock": true,
+      "image": "https://images.unsplash.com/photo-1668887462299-a2693a3fbcee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJyZWFkfGVufDB8fDB8fHww"
+    },
+    {
+      "id": 10,
+      "name": "Eggs",
+      "price": 3.49,
+      "category": "Dairy",
+      "inStock": true,
+      "image": "https://plus.unsplash.com/premium_photo-1676686125407-227f3d352df8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWdnc3xlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "id": 11,
+      "name": "Cheese",
+      "price": 4.99,
+      "category": "Dairy",
+      "inStock": true,
+      "image": "https://plus.unsplash.com/premium_photo-1691939610797-aba18030c15f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2hlZXNlfGVufDB8fDB8fHww"
+    },
+    {
+      "id": 12,
+      "name": "Chicken",
+      "price": 7.99,
+      "category": "Meat",
+      "inStock": true,
+      "image": "https://images.unsplash.com/photo-1642102904019-2eb4c4d2b492?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoaWNrZW4lMjBtZWF0fGVufDB8fDB8fHww"
+    },
+    {
+      "id": 13,
+      "name": "Fish",
+      "price": 6.49,
+      "category": "Meat",
+      "inStock": true,
+      "image": "https://plus.unsplash.com/premium_photo-1661892402083-4a4a0adcc44a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmlzaCUyMG1lYXR8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": 14,
+      "name": "Rice",
+      "price": 2.99,
+      "category": "Grains",
+      "inStock": true,
+      "image": "https://images.unsplash.com/photo-1704916029542-da6fa7bc34e7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmljZXxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "id": 15,
+      "name": "Pasta",
+      "price": 1.49,
+      "category": "Grains",
+      "inStock": true,
+      "image": "https://images.unsplash.com/photo-1609672655400-c509bdbcf7e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG5vb2RsZXN8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": 16,
+      "name": "Butter",
+      "price": 3.99,
+      "category": "Dairy",
+      "inStock": true,
+      "image": "https://images.unsplash.com/photo-1603596310923-dbb12732f9c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnV0dGVyfGVufDB8fDB8fHww"
+    },
+    {
+      "id": 17,
+      "name": "Yogurt",
+      "price": 2.49,
+      "category": "Dairy",
+      "inStock": true,
+      "image": "https://images.unsplash.com/photo-1709620054862-c2eb5b9dbefc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8eW91cmd1cnR8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": 18,
+      "name": "Cereal",
+      "price": 3.79,
+      "category": "Breakfast",
+      "inStock": true,
+      "image": "https://images.unsplash.com/photo-1670087792716-1bc411cf1671?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2VyZWFsfGVufDB8fDB8fHww"
+    },
+    {
+      "id": 19,
+      "name": "Coffee",
+      "price": 5.99,
+      "category": "Beverages",
+      "inStock": true,
+      "image": "https://images.unsplash.com/photo-1666873903780-396269c73a54?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29mZmVlfGVufDB8fDB8fHww"
+    },
+    {
+      "id": 20,
+      "name": "Tea Bags",
+      "price": 4.49,
+      "category": "Beverages",
+      "inStock": true,
+      "image": "https://media.istockphoto.com/id/1745766821/photo/tea-bags-and-mint-on-wooden-table-top-view.webp?a=1&b=1&s=612x612&w=0&k=20&c=CHdROK7VMCCvZ2bX20E9Umr0HwtHJmCJje4Yq80AZWA="
+    }
+  ],
+  "cart": []
+}
