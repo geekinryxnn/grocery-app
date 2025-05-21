@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import ProductForm from './ProductForm';
 
 function AdminDashboard({ products, onAddProduct, onDeleteProduct }) {
@@ -26,7 +25,7 @@ function AdminDashboard({ products, onAddProduct, onDeleteProduct }) {
       {activeTab === 'add' && (
         <div className="admin-section">
           <h3>Add New Product</h3>
-          <ProductForm addProduct={onAddProduct} />
+          <ProductForm onSubmit={onAddProduct} />
         </div>
       )}
 
@@ -36,7 +35,7 @@ function AdminDashboard({ products, onAddProduct, onDeleteProduct }) {
           <div className="product-management-list">
             {products.map(product => (
               <div key={product.id} className="product-management-item">
-                <span>{product.name} - ${product.price}</span>
+                <span>{product.name} - ${product.price.toFixed(2)}</span>
                 <button 
                   onClick={() => onDeleteProduct(product.id)}
                   className="delete-btn"

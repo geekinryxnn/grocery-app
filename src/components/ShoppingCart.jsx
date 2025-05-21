@@ -5,13 +5,16 @@ function ShoppingCart({ cart, removeFromCart }) {
     <div className="shopping-cart">
       <h2>Your Shopping Cart</h2>
       {cart.length === 0 ? (
-        <p className="empty-message">Your cart is empty</p>
+        <div className="empty-cart">
+          <p>Your cart is empty</p>
+          <a href="/products" className="continue-shopping">Continue Shopping</a>
+        </div>
       ) : (
         <>
           <ul className="cart-items">
             {cart.map((item, index) => (
               <li key={`${item.id}-${index}`} className="cart-item">
-                <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div className="cart-item-details">
                   {item.image && (
                     <img 
                       src={item.image} 
@@ -23,10 +26,13 @@ function ShoppingCart({ cart, removeFromCart }) {
                       }}
                     />
                   )}
-                  <span>{item.name} - ${item.price.toFixed(2)}</span>
+                  <div>
+                    <span className="cart-item-name">{item.name}</span>
+                    <span className="cart-item-price">${item.price.toFixed(2)}</span>
+                  </div>
                 </div>
                 <button 
-                  onClick={() => removeFromCart(item.id)}
+                  onClick={() => removeFromCart(index)}
                   className="remove-btn"
                 >
                   Remove
@@ -34,8 +40,11 @@ function ShoppingCart({ cart, removeFromCart }) {
               </li>
             ))}
           </ul>
-          <div className="cart-total">
-            <h3>Total: ${total.toFixed(2)}</h3>
+          <div className="cart-summary">
+            <div className="cart-total">
+              <h3>Total: ${total.toFixed(2)}</h3>
+            </div>
+            <button className="checkout-btn">Proceed to Checkout</button>
           </div>
         </>
       )}

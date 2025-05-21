@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import ProductList from './components/ProductList';
-import ProductForm from './components/ProductForm';
 import ShoppingCart from './components/ShoppingCart';
 import AdminLogin from './components/AdminLogin';
 import AdminDashboard from './components/AdminDashboard';
@@ -15,7 +14,6 @@ function App() {
   const [cart, setCart] = useState([]);
   const [isAdmin, setIsAdmin] = useState(false);
 
-
   const ADMIN_CREDENTIALS = {
     username: "admin",
     password: "admin123"
@@ -23,20 +21,22 @@ function App() {
 
   const addProduct = (newProduct) => {
     const id = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
-    const productToAdd = { ...newProduct, id, inStock: true };
+    const productToAdd = { ...newProduct, id };
     setProducts([...products, productToAdd]);
   };
 
   const deleteProduct = (productId) => {
     setProducts(products.filter(product => product.id !== productId));
+    // Also remove from cart if present
+    setCart(cart.filter(item => item.id !== productId));
   };
 
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
 
-  const removeFromCart = (productId) => {
-    setCart(cart.filter(item => item.id !== productId));
+  const removeFromCart = (index) => {
+    setCart(cart.filter((_, i) => i !== index));
   };
 
   const handleAdminLogin = (username, password) => {
@@ -60,51 +60,53 @@ function App() {
           isAdmin={isAdmin} 
           onLogout={handleAdminLogout} 
         />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route 
-            path="/products" 
-            element={
-              <ProductList 
-                products={products} 
-                addToCart={addToCart} 
-              />
-            } 
-          />
-          <Route 
-            path="/admin/login" 
-            element={
-              isAdmin ? (
-                <Navigate to="/admin/dashboard" replace />
-              ) : (
-                <AdminLogin onLogin={handleAdminLogin} />
-              )
-            } 
-          />
-          <Route 
-            path="/admin/dashboard" 
-            element={
-              isAdmin ? (
-                <AdminDashboard 
-                  products={products}
-                  onAddProduct={addProduct}
-                  onDeleteProduct={deleteProduct}
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route 
+              path="/products" 
+              element={
+                <ProductList 
+                  products={products} 
+                  addToCart={addToCart} 
                 />
-              ) : (
-                <Navigate to="/admin/login" replace />
-              )
-            } 
-          />
-          <Route 
-            path="/cart" 
-            element={
-              <ShoppingCart 
-                cart={cart} 
-                removeFromCart={removeFromCart} 
-              />
-            } 
-          />
-        </Routes>
+              } 
+            />
+            <Route 
+              path="/admin/login" 
+              element={
+                isAdmin ? (
+                  <Navigate to="/admin/dashboard" replace />
+                ) : (
+                  <AdminLogin onLogin={handleAdminLogin} />
+                )
+              } 
+            />
+            <Route 
+              path="/admin/dashboard" 
+              element={
+                isAdmin ? (
+                  <AdminDashboard 
+                    products={products}
+                    onAddProduct={addProduct}
+                    onDeleteProduct={deleteProduct}
+                  />
+                ) : (
+                  <Navigate to="/admin/login" replace />
+                )
+              } 
+            />
+            <Route 
+              path="/cart" 
+              element={
+                <ShoppingCart 
+                  cart={cart} 
+                  removeFromCart={removeFromCart} 
+                />
+              } 
+            />
+          </Routes>
+        </main>
       </div>
     </Router>
   );

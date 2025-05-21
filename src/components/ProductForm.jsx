@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function ProductForm({ addProduct }) {
+function ProductForm({ onSubmit }) {
   const [formData, setFormData] = useState({
     name: '',
     price: '',
@@ -25,7 +25,7 @@ function ProductForm({ addProduct }) {
       price: parseFloat(formData.price),
       inStock: true
     };
-    addProduct(productToAdd);
+    onSubmit(productToAdd);
     setFormData({ 
       name: '', 
       price: '', 
@@ -36,7 +36,18 @@ function ProductForm({ addProduct }) {
 
   return (
     <form onSubmit={handleSubmit} className="product-form">
-      <h2>Add New Product</h2>
+      <div className="form-group">
+        <label>
+          Image URL:
+          <input 
+            type="url" 
+            name="image" 
+            value={formData.image} 
+            onChange={handleChange} 
+            placeholder="https://example.com/image.jpg"
+          />
+        </label>
+      </div>
       
       {formData.image && (
         <div className="image-preview">
@@ -44,56 +55,51 @@ function ProductForm({ addProduct }) {
         </div>
       )}
       
-      <label>
-        Image URL:
-        <input 
-          type="url" 
-          name="image" 
-          value={formData.image} 
-          onChange={handleChange} 
-          placeholder="https://example.com/image.jpg"
-        />
-      </label>
+      <div className="form-group">
+        <label>
+          Product Name:
+          <input 
+            type="text" 
+            name="name" 
+            value={formData.name} 
+            onChange={handleChange} 
+            required 
+          />
+        </label>
+      </div>
       
-      <label>
-        Product Name:
-        <input 
-          type="text" 
-          name="name" 
-          value={formData.name} 
-          onChange={handleChange} 
-          required 
-        />
-      </label>
+      <div className="form-group">
+        <label>
+          Price:
+          <input 
+            type="number" 
+            name="price" 
+            value={formData.price} 
+            onChange={handleChange} 
+            step="0.01" 
+            min="0.01"
+            required 
+          />
+        </label>
+      </div>
       
-      <label>
-        Price:
-        <input 
-          type="number" 
-          name="price" 
-          value={formData.price} 
-          onChange={handleChange} 
-          step="0.01" 
-          min="0.01"
-          required 
-        />
-      </label>
+      <div className="form-group">
+        <label>
+          Category:
+          <select 
+            name="category" 
+            value={formData.category} 
+            onChange={handleChange}
+            required
+          >
+            {categories.map(category => (
+              <option key={category} value={category}>{category}</option>
+            ))}
+          </select>
+        </label>
+      </div>
       
-      <label>
-        Category:
-        <select 
-          name="category" 
-          value={formData.category} 
-          onChange={handleChange}
-          required
-        >
-          {categories.map(category => (
-            <option key={category} value={category}>{category}</option>
-          ))}
-        </select>
-      </label>
-      
-      <button type="submit">Add Product</button>
+      <button type="submit" className="submit-btn">Add Product</button>
     </form>
   );
 }
