@@ -79,7 +79,6 @@ function ProductForm({ addProduct }) {
         />
       </label>
       
-      
       <label>
         Category:
         <select 
@@ -93,17 +92,6 @@ function ProductForm({ addProduct }) {
           ))}
         </select>
       </label>
-      <label>
-        Description:
-        <textarea
-          name="description"
-          value={formData.description}
-          onChange={handleChange}
-          rows="3"
-          placeholder="Enter product description..."
-        />
-      </label>
-      
       
       <button type="submit">Add Product</button>
     </form>

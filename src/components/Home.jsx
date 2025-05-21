@@ -3,11 +3,12 @@ import '../index.css';
 
 function Home() {
   const featuredCategories = [
-    { name: "Fruits", icon: "🍎"},
+    { name: "Fruits", icon: "🍎" },
     { name: "Vegetables", icon: "🥦" },
-    { name: "Dairy", icon: "🥛" }
+    { name: "Dairy", icon: "🥛" },
+    { name: "Bakery", icon: "🥖" },
+    { name: "Meat", icon: "🥩" }
   ];
-
 
   return (
     <div className="home-container">
@@ -18,6 +19,7 @@ function Home() {
       </section>
 
       <section className="featured-section">
+        <h2>Shop by Category</h2>
         <div className="category-grid">
           {featuredCategories.map((category, index) => (
             <Link 
@@ -27,7 +29,6 @@ function Home() {
             >
               <span className="category-icon">{category.icon}</span>
               <h3>{category.name}</h3>
-              <p>{category.count} items</p>
             </Link>
           ))}
         </div>
